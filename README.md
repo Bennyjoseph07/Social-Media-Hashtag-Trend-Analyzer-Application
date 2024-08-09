@@ -6,10 +6,10 @@ This project contains scripts for accessing the AWS Lambda, AWS Dynamodb, AWS AP
 1. Introduction
 2. Installation
 3. Usage
-4. Scripts(
+4. Scripts
    - app.py
    - aws_lambda_funtion.py
-)
+
 
 5. Contact
 
