@@ -21,26 +21,25 @@ This application will integrate with AWS Lambda and DynamoDB to facilitate post 
 
 To set up this project, clone the repository and install the necessary dependencies:
 
-```bash
 # Clone the repository
 git clone https://github.com/Bennyjoseph07/Social-Media-Hashtag-Trend-Analyzer-Application.git
 
 # Navigate to the project directory
-cd yourprojectname
+cd Social-Media-Hashtag-Trend-Analyzer-Application/tree/main
 
 # Install dependencies
 pip install -r requirements.txt
 
 ## Usage
 
-Need to create 1 AWS Lambda funtion with the file 
+Need to create 1 AWS Lambda function with the file 
 aws_lambda_funtion.py
 
-Need to create 2 dynamodb tables 
+We need to create 2 dynamodb tables 
 1. twitter_post with key as twitter_post
 2. twitter_hashtag with key as treanding_tag
 
-For the created Lambda funtion need to create AWS API gateway in POST method
+For the created Lambda funtion, we need to create AWS API gateway in POST method
 
 To run the streamlit application 
 Copy the API Gateway POST methord URL link and change in app.py
