@@ -3,15 +3,13 @@
 This project contains scripts for accessing the AWS Lambda, AWS Dynamodb, AWS API gateway.
 ## Table of Contents
 
-1. Introduction
-2. Installation
-3. Usage
-4. Scripts
+1. [Introduction](#introduction)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Scripts](#scripts)
    - app.py
    - aws_lambda_funtion.py
-
-
-5. Contact
+5. [Contact](#contact)
 
 ## Introduction
 
