@@ -41,12 +41,11 @@ We need to create 2 dynamodb tables
 
 For the created Lambda funtion, we need to create AWS API gateway in POST method
 
-To run the streamlit application 
-Copy the API Gateway POST methord URL link and change in app.py
-app.py
-streamlit run app.py
-
 ## Scripts
+ - To run the streamlit application 
+ - Copy the API Gateway POST methord URL link and change in app.py
+- app.py
+- streamlit run app.py
 app.py
 This code is a Streamlit-based web application for analyzing social media trends. 
 It allows users to post messages and retrieve trending hashtags via API calls, displaying the results in a chat interface or as a DataFrame and bar chart. 
