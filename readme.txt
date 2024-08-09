@@ -1,31 +1,5 @@
-# Social Media Hashtag Trend Analyzer Application
-
-This project contains scripts for accessing the AWS Lambda, AWS Dynamodb, AWS API gateway.
-## Table of Contents
-
-1. Introduction
-2. Installation
-3. Usage
-4. Scripts(
-   - app.py
-   - aws_lambda_funtion.py
-)
-
-5. Contact
-
-## Introduction
-
-The task is to develop a Streamlit application that allows users to compose and publish posts, same as popular social media platforms. 
-This application will integrate with AWS Lambda and DynamoDB to facilitate post processing and hashtag analysis.
-
-
-## Installation
-
-To set up this project, clone the repository and install the necessary dependencies:
-
-```bash
 # Clone the repository
-git clone https://github.com/yourusername/yourprojectname.git
+git clone https://github.com/Bennyjoseph07/Social-Media-Hashtag-Trend-Analyzer-Application.git
 
 # Navigate to the project directory
 cd yourprojectname
@@ -59,4 +33,4 @@ The app's layout includes title, image, and input options for user interaction.
 ## Contact
 Created by Your Name - Benny Joseph
 
-Project Link: https://github.com/yourusername/yourprojectname
+Project Link: https://github.com/Bennyjoseph07/Social-Media-Hashtag-Trend-Analyzer-Application
