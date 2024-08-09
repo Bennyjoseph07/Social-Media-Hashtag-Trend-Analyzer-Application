@@ -25,7 +25,7 @@ To set up this project, clone the repository and install the necessary dependenc
 git clone https://github.com/Bennyjoseph07/Social-Media-Hashtag-Trend-Analyzer-Application.git
 
 # Navigate to the project directory
-cd Social-Media-Hashtag-Trend-Analyzer-Application/tree/main
+cd Social-Media-Hashtag-Trend-Analyzer-Application
 
 # Install dependencies
 pip install -r requirements.txt
