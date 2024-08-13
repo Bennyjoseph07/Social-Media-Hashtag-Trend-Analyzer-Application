@@ -58,10 +58,11 @@ if question =="Post":
         if user_input:
             # Add user message to chat history
             st.session_state.messages.append({"role": "user", "content": user_input})
-            url = "https://r4pz5qc3ee.execute-api.us-east-1.amazonaws.com/tweet_post/"
+            url = "https://ljv9joy583.execute-api.us-east-1.amazonaws.com/twitter/"
 
             # JSON body
             data = {
+                "type" : "Post",
                 "post": user_input,
 
             }
@@ -79,8 +80,10 @@ if question =="Post":
             res = response.text
             dict_result = json.loads(res)
            
-
-            response_post = dict_result["res"]
+            #print("line 82",dict_result["body"])
+            a= dict_result["body"]
+            #print("a",json.loads(a)["res"])
+            response_post = json.loads(a)["res"]
             #res = response.get("res") 
             res_op = f"{response_post}"
             
@@ -93,13 +96,24 @@ if question =="Post":
 if question =="Trending Hashtag":
     
             
-        url = "https://xlsajsfg34.execute-api.us-east-1.amazonaws.com/twitter_treand/"
+        url = "https://ljv9joy583.execute-api.us-east-1.amazonaws.com/twitter/"
 
-       
+    
         # Make the POST request
-        response = requests.post(url)#, data=json_data, headers=headers)
+        data = {
+                "type" : "Trending Hashtag",
+                
+
+            }
+        json_data = json.dumps(data)
+        headers = {
+                "Content-Type": "application/json"
+            }
+        response = requests.post(url,data=json_data, headers=headers)#, data=json_data, headers=headers)
         res = response.text
         dict_result = json.loads(res)
+        dict_result = json.loads(dict_result["body"])
+        #print("in treand ",dict_result)
         treand_hash_data = pd.DataFrame(list(dict_result.items()), columns=['Hashtag', 'Count'])
 
         treand_hash_data['Count'] = pd.to_numeric(treand_hash_data['Count'])        

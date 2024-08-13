@@ -1,9 +1,6 @@
 import json,re,boto3
 
 
-####### twitter post tablename = twitter_post     key twitter_post
-####### twitter hastag table name = twitter_hashtag key   treanding_tag
-
 def treanding_hashtag_data():
     boto_client = boto3.client('dynamodb',region_name = "us-east-1")
    
@@ -15,12 +12,9 @@ def treanding_hashtag_data():
 
 def lambda_handler(event, context):
     
+    if event["type"] == "Post":
     
-
-    data = json.loads(event['body'])
-    if data["type"] == "Post":
-    
-        twitter_post = data["post"]
+        twitter_post = event["post"]
         hashtags = re.findall(r'#(\w+)', twitter_post)
         post_content = twitter_post
         dynamodb = boto3.resource('dynamodb',region_name= "us-east-1") 
@@ -64,7 +58,7 @@ def lambda_handler(event, context):
         }
 
 
-    elif data["type"]=="Trending Hashtag":
+    elif event["type"]=="Trending Hashtag":
         boto_client = boto3.client('dynamodb',region_name = "us-east-1")
    
         scan_param = {'TableName':'twitter_hashtag'}
